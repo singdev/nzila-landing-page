@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="assets/css/app.css" /> -->
+    <title>NZILA Leaders</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <nav class="bg-white shadow dark:bg-gray-800" style="z-index: 9999">
+      <div
+        class="
+          container
+          px-6
+          py-3
+          mx-auto
+          lg:flex lg:justify-between lg:items-center
+        "
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <a
+              class="
+                text-xl
+                font-bold
+                text-gray-800
+                dark:text-white
+                lg:text-2xl
+                hover:text-gray-700
+                dark:hover:text-gray-300
+              "
+              href="#"
+              ><img src="./nzila_logo.jpg" width="80px" height="80px" /></a
+            >
+          </div>
+        </div>
+        <div>
+            <p>Adresse email</p>
+            <p><strong>strong>someMail@gmail.com</strong></p>
+            <p class="mt-8">
+                Adresse
+            </p>
+            <p><strong>Rue pecqueur, BP 0908</strong></p>
+        </div>
+        <div>
+            <p>Contact 1</p>
+            <p><strong>077 77 77 77</strong></p>
+            <p class="mt-8">
+                Contact 2
+            </p>
+            <p><strong>066 66 66 66</strong></p>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-blue-600 shadow sticky top-0 dark:bg-gray-800" style="z-index: 9999">
+      <div
+        class="
+          container
+          px-6
+          py-3
+          mx-auto
+          lg:flex lg:justify-between lg:items-center
+        "
+      >
+        <div class="flex items-center justify-between">
+          <div class="mb-4 lg:mb-0">
+            <a
+              class="
+                lg:hidden
+                text-xl
+                font-bold
+                text-white
+                dark:text-white
+                lg:text-2xl
+                hover:text-white-700
+              "
+              href="/"
+              ><img src="./nzila_logo.jpg" width="80px" height="80px" class="object-cover"/></a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              id="menu-button"
+              class="
+                text-white
+                dark:text-white
+                hover:text-white-800
+                dark:hover:text-white-800
+                focus:outline-none focus:text-white
+                dark:focus:text-white
+              "
+              aria-label="toggle menu"
+            >
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                <path
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div id="mobile-menu" class="items-center hidden lg:flex ease-linear transition-all duration-300">
+          <div class="flex flex-col lg:flex-row lg:mx-6">
+            <a
+              href="#about-us"
+              class="
+                my-3
+                flex
+                items-center
+                text-white
+                dark:text-white
+                hover:text-white
+                dark:hover:text-white
+                lg:mx-4 lg:my-0
+              "
+              >Qui somme nous ?</a
+            >
+            <a
+              class="
+                my-3
+                flex
+                items-center
+                text-white
+                dark:text-white
+                hover:text-white
+                dark:hover:text-white
+                lg:mx-4 lg:my-0
+              "
+              href="#the-osc"
+              >Devenir membre</a
+            >
+            <a
+            class="
+              my-3
+              text-white
+              dark:text-white
+              hover:text-white
+              dark:hover:text-white
+              lg:mx-4 lg:my-0
+              py-4
+              px-8
+              rounded-lg
+              bg-red-600
+              "
+              href="#"
+              >Faire un don</a
+          >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="min-h-screen relative lg:h-screen bg-gray-50">
+      <img src="https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="h-full w-full absolute top-0 left-0 object-cover" />
+      <div class="bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full"></div>
+      <div class="absolute top-0 left-0 text-white grid grid-cols-1 w-4/5 h-full">
+        <div class="flex flex-col items-left  w-full px-4 lg:px-12 justify-center h-full">
+          <h5 class="text-4xl py-6 font-bold  text-yellow-400 lg:py-0">
+            NZILA Leaders
+          </h1>
+          <p class="mt-8">
+              NZILA Leaders est une association de jeunes Leaders rassembles autour des ODD pour une amelioration de la qualité de vie sur terre.
+              Formation, Reflexion et Action
+          </p>
+
+          <a
+            class="
+            my-8
+            text-white
+            dark:text-white
+            hover:text-white
+            dark:hover:text-white
+            py-4
+            px-8
+            rounded-lg
+            w-48
+            bg-yellow-600
+            "
+            href="#"
+            >NL Tecno party</a
+        >
+        </div>
+      </div>
+    </header>
+    <div class="relative mt-24 lg:-mt-24" style="z-index: 1;">
+      <div class="grid w-4/5 mx-auto gap-4 grid-cols-12">
+        <div class="col-span-12 mx-auto lg:col-span-4">
+          <div class="shadow-xl flex items-end bg-white mx-auto h-56 w-56 rounded-lg">
+            <p class="pt-24 w-full text-center pb-4">Formation</p>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-4">
+          <div class="shadow-xl flex items-end bg-white mx-auto h-56 w-56 rounded-lg">
+            <p class="pt-24 w-full text-center pb-4">Reflexion</p>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-4">
+          <div class="shadow-xl flex items-end bg-white mx-auto h-56 w-56 rounded-lg">
+            <p class="pt-24 w-full text-center pb-4">Actions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-us" class="w-4/5 mx-auto text-center bg-white rounded-xl">
+      <section class="mt-48">
+        <h1 class="text-4xl font-bold text-left">Qui sommes nous ?</h1>
+        <p class="text-lg text-left mt-4">
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+        </p>
+
+        <p class="text-lg text-left mt-4">
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+          Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+        </p>
+      </section>
+    </div>
+
+    <section class="mt-32">
+      <h1 class="text-4xl font-bold text-yellow-400 text-center">Nos Activites</h1>
+      <div class="grid grid-cols-1 mt-8">
+        <div class="w-full overflow-hidden py-16">
+          <div class="circle relative hidden lg:flex">
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:hidden w-10/12 mx-auto">
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-32 w-10/12 mx-auto">
+      <h1 class="text-4xl font-bold text-yellow-400 text-center">Nos Partenaires</h1>
+      <h4 class="text-2xl mt-12 text-center text-gray-500">Ils nous ont permis de réaliser un certain nombre d'activités</h4>
+
+      <div class="grid mt-12 lg:mt-24 grid-cols-1 lg:grid-cols-3">
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl mx-auto">Sobraga</h3>
+          <p>Les Brasseries du Gabon</p>
+        </div>
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl mx-auto">Sobraga</h3>
+          <p>Les Brasseries du Gabond</p>
+        </div>
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl">Sobraga</h3>
+          <p>Les Brasseries du Gabon</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="the-osc" class="mt-32 mb-32 w-10/12 mx-auto">
+      <div class="bg-white">
+        <nav id="home-tab-nav" class="flex flex-col justify-center border-b border-gray sm:flex-row">
+          <button
+            onclick="switchHomeTab(event, 1)"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+              active
+              font-medium
+            "
+          >
+            Tous les membres</button
+          ><button
+            onclick="switchHomeTab(event,2)"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+            "
+          >
+            Devenir Membre</button
+          ><button
+            onclick="switchHomeTab(event, 3)"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+            "
+          >
+            NL Tech Party</button>
+        </nav>
+
+        <div id="home-tabs" class="tabs  max-w-7xl mx-auto sm:px-6 lg:px-8 mt-32">
+
+          <div id="home-tab-1">
+            <h1 class="text-2xl text-gray-500">NZILA Compte pres de 1562 membres au Gabon et a l'International</h1>
+            <div class="grid grid-cols-12 gap-4 mt-24">
+              <div class="col-span-12 lg:col-span-4 lg:col-span-3">
+                <img class="h-48 w-48 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              </div>
+              <div class="col-span-12 lg:col-span-8 lg-col-span-9 text-center lg:text-left">
+                <h4 class="text-2xl font-bold">Serge Manani DAOUDA</h4>
+                <p class="text-gray-500">President de l'association depuis 2015</p>
+                <p class="text-lg text-left mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div> <!-- user-card -->
+
+            <div class="grid grid-cols-12 mt-32 gap-8 justify-center items-center">
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>  
+            </div><!-- users grid col -->
+          </div>
+
+          <div id="home-tab-2" style="display: none">
+            <h1 class="text-2xl mb-24 text-gray-500">Remplissez le formulaire pour adhérer à l'association NZILA Leaders</h1>
+            <form class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Nom"
+                  id="lastName"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Prénom"
+                  id="firstName"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  placeholder="Adresse Mail"
+                  id="email"
+                  type="email"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Téléphone"
+                  id="tel"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Adresse"
+                  id="adresse"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="date"
+                  placeholder="Date de naissance"
+                  id="birth-date"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Lieu de naissance"
+                  id="birth-place"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Sexe"
+                  id="sexe"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+              </div>
+              <div class="mt-12">
+                <button
+                  id="register-new-user"
+                  class="
+                    bg-blue-500
+                    text-white
+                    active:bg-purple-600
+                    font-bold
+                    uppercase
+                    text-base
+                    px-8
+                    md:px-32
+                    py-4
+                    rounded
+                    shadow-md
+                    hover:shadow-lg
+                    outline-none
+                    focus:outline-none
+                    mr-1
+                    mb-1
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                  type="button"
+                >
+                  Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div id="home-tab-3" style="display: none">
+            <p class="text-2xl text-gray-500">
+              Le projet NL tech party vise à offir la possibilité aux jeunes de s'exprimer librement sans crainte de subir une quelconque discrimination ainsi que de se former en s'amusant aux questions de civisme.
+            </p>
+            <p class="text-2xl mt-8 text-gray-500">
+              D'autre part la plateforme est un outil d'aide aux psychologue des lycées à détecter plus rapidement les élèves ayant des difficultés particulières.
+            </p>
+
+            <div class="flex flex-wrap lg:flex-nowrap mt-16">
+              <div class="mr-8 my-5">
+                <img src="assets/img/IPhone_X_vector.svg" alt="some image" />
+              </div>
+
+              <div class="my-5">
+                <h3 class="text-yellow-500 font-bold text-3xl">Bon Citoyen</h3>
+                <p class="mt-4 text-xl">Lorem ipsum dolor sit amet, consectetur adiscisiping elit. Phaselius congue, arcu vel molestie gravida, orci risus blandit justo, voluptat porta augue dui sit amet quam</p>
+                
+                <h3 class="text-yellow-500 font-bold text-3xl mt-8">Inbox</h3>
+                <p class="mt-4 text-xl">Lorem ipsum dolor sit amet, consectetur adiscisiping elit. Phaselius congue, arcu vel molestie gravida, orci risus blandit justo, voluptat porta augue dui sit amet quam</p>
+
+                <h3 class="text-yellow-500 font-bold text-3xl mt-8">Backoffice</h3>
+                <p class="mt-4 text-xl">Lorem ipsum dolor sit amet, consectetur adiscisiping elit. Phaselius congue, arcu vel molestie gravida, orci risus blandit justo, voluptat porta augue dui sit amet quam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24 bg-black">
+      <div class="w-10/12 mx-auto sm:px-6 lg:px-12 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-4xl text-white">Suivez nous sur nos reseaux</h3>
+            <img src="assets/facebook_dark.svg" class="h-16 w-16 mt-4">
+          </div>
+          <div>
+            <p class="text-lg text-left text-white mt-4">
+              Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap justify-center mt-24">
+          <a
+            class="
+              my-1
+              text-white
+              dark:text-white
+              hover:text-blue-500
+              dark:hover:text-blue-500
+              underline
+              text-xl
+              mx-4
+              font-thin
+            "
+            href="#"
+            >Politique de confidentialité</a
+          >
+          <a
+            class="
+            my-1
+            mx-4
+            text-white
+            dark:text-white
+            hover:text-blue-500
+            dark:hover:text-blue-500
+            underline
+            text-xl
+            font-thin
+            "
+            href="#"
+            >Condition d'utilisation</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="functions.js"></script>
+  </body>
+</html>
