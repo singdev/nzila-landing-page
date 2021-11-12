@@ -8,7 +8,7 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <nav class="bg-white shadow dark:bg-gray-800" style="z-index: 9999">
+    <nav class="bg-white shadow dark:bg-gray-800" style="z-index: 9">
       <div
         class="
           container
@@ -53,7 +53,7 @@
         </div>
       </div>
     </nav>
-    <nav class="bg-blue-600 shadow sticky top-0 dark:bg-gray-800" style="z-index: 9999">
+    <nav class="bg-blue-600 shadow sticky top-0 dark:bg-gray-800" style="z-index: 9">
       <div
         class="
           container
@@ -64,7 +64,7 @@
         "
       >
         <div class="flex items-center justify-between">
-          <div class="mb-4 lg:mb-0">
+          <div class="lg:mb-0">
             <a
               class="
                 lg:hidden
@@ -139,6 +139,7 @@
             <a
             class="
               my-3
+              cursor-pointer
               text-white
               dark:text-white
               hover:text-white
@@ -149,7 +150,7 @@
               rounded-lg
               bg-red-600
               "
-              href="#"
+              onclick="toggleModal('make-donation-modal')"
               >Faire un don</a
           >
           </div>
@@ -397,12 +398,12 @@
 
           <div id="home-tab-2" style="display: none">
             <h1 class="text-2xl mb-24 text-gray-500">Remplissez le formulaire pour adhérer à l'association NZILA Leaders</h1>
-            <form class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div class="form-group">
+            <form id="new-user-form" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <input
                   type="text"
                   placeholder="Nom"
                   id="lastName"
+                  name="nom"
                   required
                   class="
                     px-3
@@ -419,12 +420,11 @@
                     w-full
                   "
                 />                  
-              </div>
-              <div class="form-group">
                 <input
                   type="text"
                   placeholder="Prénom"
                   id="firstName"
+                  name="prenom"
                   required
                   class="
                     px-3
@@ -441,11 +441,10 @@
                     w-full
                   "
                 />                  
-              </div>
-              <div class="form-group">
                 <input
                   placeholder="Adresse Mail"
                   id="email"
+                  name="email"
                   type="email"
                   required
                   class="
@@ -463,12 +462,11 @@
                     w-full
                   "
                 />                  
-              </div>
-              <div class="form-group">
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Téléphone"
-                  id="tel"
+                  id="telephone"
+                  name="telephone"
                   required
                   class="
                     px-3
@@ -485,12 +483,11 @@
                     w-full
                   "
                 />                  
-              </div>
-              <div class="form-group">
                 <input
                   type="text"
                   placeholder="Adresse"
                   id="adresse"
+                  name="adresse"
                   required
                   class="
                     px-3
@@ -506,35 +503,12 @@
                     focus:outline-none focus:ring
                     w-full
                   "
-                />                  
-              </div>
-              <div class="form-group">
-                <input
-                  type="date"
-                  placeholder="Date de naissance"
-                  id="birth-date"
-                  required
-                  class="
-                    px-3
-                    py-4
-                    placeholder-gray-400
-                    text-gray-600
-                    relative
-                    bg-white bg-white
-                    rounded
-                    text-sm
-                    border border-gray-400
-                    outline-none
-                    focus:outline-none focus:ring
-                    w-full
-                  "
-                />                  
-              </div>
-              <div class="form-group">
+                />
                 <input
                   type="text"
-                  placeholder="Lieu de naissance"
-                  id="birth-place"
+                  placeholder="Poste"
+                  id="poste"
+                  name="poste"
                   required
                   class="
                     px-3
@@ -550,13 +524,12 @@
                     focus:outline-none focus:ring
                     w-full
                   "
-                />                  
-              </div>
-              <div class="form-group">
+                />           
                 <input
                   type="text"
-                  placeholder="Sexe"
-                  id="sexe"
+                  placeholder="Ville"
+                  id="ville"
+                  name="ville"
                   required
                   class="
                     px-3
@@ -572,15 +545,14 @@
                     focus:outline-none focus:ring
                     w-full
                   "
-                />                  
-              </div>
-              <div class="mt-12">
+                />            
+              <div class="mt-12 lg:col-span-2">
                 <button
                   id="register-new-user"
                   class="
                     bg-blue-500
                     text-white
-                    active:bg-purple-600
+                    active:bg-yellow-600
                     font-bold
                     uppercase
                     text-base
@@ -600,7 +572,7 @@
                   "
                   type="button"
                 >
-                  Enregistrer
+                  <i id="register-loading-icon" class="icn">&#9964;</i>Enregistrer
                 </button>
               </div>
             </form>
@@ -684,6 +656,257 @@
         </div>
       </div>
     </footer>
+
+    <!-- 
+
+      Make Modals
+
+     -->
+<!-- Modal -->
+<div
+class="
+  hidden
+  overflow-x-hidden overflow-y-hidden
+  fixed
+  inset-0
+  z-50
+  outline-none
+  focus:outline-none
+  justify-center
+  items-center
+"
+id="make-donation-modal"
+>
+<div class="relative w-auto my-6  mx-auto max-w-sm">
+  <!--content-->
+  <div
+    class="
+      border-0
+      rounded-lg
+      shadow-lg
+      relative
+      flex flex-col
+      w-full
+      bg-white
+      outline-none
+      focus:outline-none
+      
+    "
+  >
+    <!--header-->
+    <div
+      class="
+        flex
+        items-start
+        justify-between
+        p-5
+        border-b border-solid border-gray-200
+        rounded-t
+      "
+    >
+      <h3 class="text-3xl font-semibold">Faire un Don</h3>
+      <button
+        class="
+          p-1
+          ml-auto
+          bg-transparent
+          border-0
+          text-gray-300
+          float-right
+          text-3xl
+          leading-none
+          font-semibold
+          outline-none
+          focus:outline-none
+        "
+        onclick="toggleModal('make-donation-modal')"
+      >
+        <span
+          class="
+            bg-transparent
+            h-6
+            w-6
+            text-2xl
+            block
+            outline-none
+            focus:outline-none
+          "
+        >
+          <i class="fas fa-times">x</i>
+        </span>
+      </button>
+    </div>
+    <!--body-->
+    <div class="relative p-6 flex-auto">
+      <form id="make-donation-form">
+        <h6 class="text-xl mb-4">Le Donnateur</h6>
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <input
+            type="text"
+            placeholder="Nom"
+            id="lastName"
+            name="nom"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />                  
+          <input
+            type="text"
+            placeholder="Prénom"
+            id="firstName"
+            name="prenom"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+          <input
+            type="tel"
+            placeholder="Téléphone"
+            id="telephone"
+            name="telephone"
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+        </div>
+        <h6 class="text-xl mb-4 mt-5">Informations du paiement</h6>
+        <div class="grid grid-cols-1 mt-4 gap-4">
+          <input
+            type="tel"
+            placeholder="Tel Airtel Money"
+            id="telephone-airtel-money"
+            name="telephone-airtel-money"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+          <textarea
+            name="description-paiement"
+            class="form-textarea border px-3 py-4 border-gray-400 outline-none focus:outline-none focus:ring text-sm rounded mt-1 block w-full"
+            rows="3"
+            placeholder="Compte Airtel Money (Propriétaire)"
+          ></textarea>
+        </div>
+      </form>
+    </div>
+    <div
+      class="
+        flex
+        items-center
+        justify-end
+        p-6
+        border-t border-solid border-gray-200
+        rounded-b
+      "
+    >
+      <button
+        class="
+          text-yellow-500
+          background-transparent
+          font-bold
+          uppercase
+          px-6
+          py-2
+          text-sm
+          outline-none
+          focus:outline-none
+          mr-1
+          mb-1
+          ease-linear
+          transition-all
+          duration-150
+        "
+        type="button"
+        onclick="toggleModal('make-donation-modal')"
+      >
+        Annuler
+      </button>
+      <button
+        class="
+          bg-yellow-500
+          text-white
+          active:bg-yellow-600
+          font-bold
+          uppercase
+          text-xs
+          px-4
+          py-2
+          rounded
+          shadow
+          hover:shadow-md
+          outline-none
+          focus:outline-none
+          mr-1
+          mb-1
+          ease-linear
+          transition-all
+          duration-150
+        "
+        type="button"
+        onclick="makeDonation();"
+      >
+        <i id="donation-loading-icon" class="icn">&#9964;</i>Valider
+      </button>
+    </div>
+  </div>
+    <!--footer-->
+    
+  </div>
+</div>
+</div>
+<div
+class="hidden opacity-25 fixed inset-0 z-40 bg-black"
+id="make-donation-modal-backdrop"
+></div>
+
+
     <script src="functions.js"></script>
   </body>
 </html>
