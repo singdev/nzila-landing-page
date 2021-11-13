@@ -18,40 +18,52 @@ function toggleModal(modalID) {
   document.getElementById(modalID + "-backdrop").classList.toggle("flex");
 }
 
-const makeDonation = () => {
-    const loadingIcon = document.getElementById("donation-loading-icon");
-  
-    const newUserForm = document.getElementById("make-donation-form");
-    if (newUserForm.checkValidity()) {
-      const formData = new FormData(newUserForm);
-      loadingIcon.style.display = "inline-block";
-      loadingIcon.classList.add("icn-spinner");
-  
-      fetch("http://51.222.142.71:8008/v1/api/util/mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        body: formData,
-      })
-        .then((response) => response)
-        .then((res) => {
-          loadingIcon.style.display = "none";
-          loadingIcon.classList.remove("icn-spinner");
-          if (res.status === 200 || res.status === 201) {
-              toggleModal('make-donation-modal');
-              alert("Merci pour votre cotisation !");
-          } else {
-            alert("Erreur lors de la cotisation, veuillez essayer à nouveau !");
-          }
-        })
-        .catch((error) => {
-          loadingIcon.style.display = "none";
-          loadingIcon.classList.remove("icn-spinner");
-          toggleModal('make-donation-modal');
-          alert("Erreur lors de la cotisation, veuillez essayer à nouveau !");
-        });
+const makeDonation = async () => {
+  const loadingIcon = document.getElementById("donation-loading-icon");
+  const newUserForm = document.getElementById("make-donation-form");
+  const formData = new FormData();
+
+  loadingIcon.style.display = "inline-block";
+  loadingIcon.classList.add("icn-spinner");
+
+  if (newUserForm.checkValidity()) {
+    const lastName = document.getElementById("donator-lastName");
+    const firstName = document.getElementById("donator-firstName");
+    const telephone = document.getElementById("donator-telephone");
+
+    const telAirtelMoney = document.getElementById("telephone-airtel-money");
+    const descriptionPaiement = document.getElementById("description-paiement");
+
+    formData.append("nom", lastName.value);
+    formData.append("prenom", firstName.value);
+    formData.append("telephone", telephone.value);
+
+    formData.append("telAirtelMoney", telAirtelMoney.value);
+    formData.append("descriptionPaiement", descriptionPaiement.value);
+
+    const res = await fetch("http://51.222.142.71:8008/v1/api/adhesion", {
+      method: "post",
+      body: formData
+    });
+    console.log(res.statusText);
+    if (res.status == 200) {
+      const data = await res.json();
+      console.log("SUCCESS");
+      
+      toggleModal("make-donation-modal");
+      
+      alert("Merci, votre don à été envoyé !")
+      loadingIcon.style.display = "none";
+      loadingIcon.classList.remove("icn-spinner");
     } else {
-      alert("Veuillez bien remplir le formulaire");
+      loadingIcon.style.display = "none";
+      loadingIcon.classList.remove("icn-spinner");
+      alert("Erreur lors du paiement, veuillez essayer à nouveau!");
+      console.log("ERROR");
     }
-  };
+  } else {
+    loadingIcon.style.display = "none";
+    loadingIcon.classList.remove("icn-spinner");
+    alert("Veuillez bien remplir le formulaire");
+  }
+};
