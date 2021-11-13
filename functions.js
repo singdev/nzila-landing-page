@@ -41,7 +41,7 @@ const makeDonation = async () => {
     formData.append("telAirtelMoney", telAirtelMoney.value);
     formData.append("descriptionPaiement", descriptionPaiement.value);
 
-    const res = await fetch("http://51.222.142.71:8008/v1/api/adhesion", {
+    const res = await fetch("http://51.222.142.71:8008/v1/api/util/mail", {
       method: "post",
       body: formData
     });
