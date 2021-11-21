@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="assets/css/app.css" /> -->
+    <title>NZILA Leaders</title>
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <nav class="bg-white shadow dark:bg-gray-800" style="z-index: 9">
+      <div
+        class="
+          container
+          px-6
+          py-3
+          mx-auto
+          lg:flex lg:justify-between lg:items-center
+        "
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <a
+              class="
+                text-xl
+                font-bold
+                text-gray-800
+                dark:text-white
+                lg:text-2xl
+                hover:text-gray-700
+                dark:hover:text-gray-300
+              "
+              href="#"
+              ><img src="./nzila_logo.jpg" width="80px" height="80px" /></a
+            >
+          </div>
+        </div>
+        <div>
+            <p>Adresse email</p>
+            <p><strong>strong>someMail@gmail.com</strong></p>
+            <p class="mt-8">
+                Adresse
+            </p>
+            <p><strong>Rue pecqueur, BP 0908</strong></p>
+        </div>
+        <div>
+            <p>Contact 1</p>
+            <p><strong>077 77 77 77</strong></p>
+            <p class="mt-8">
+                Contact 2
+            </p>
+            <p><strong>066 66 66 66</strong></p>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-blue-600 shadow sticky top-0 dark:bg-gray-800" style="z-index: 9">
+      <div
+        class="
+          container
+          px-6
+          py-3
+          mx-auto
+          lg:flex lg:justify-between lg:items-center
+        "
+      >
+        <div class="flex items-center justify-between">
+          <div class="lg:mb-0">
+            <a
+              class="
+                lg:hidden
+                text-xl
+                font-bold
+                text-white
+                dark:text-white
+                lg:text-2xl
+                hover:text-white-700
+              "
+              href="/"
+              ><img src="./nzila_logo.jpg" width="80px" height="80px" class="object-cover"/></a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              id="menu-button"
+              class="
+                text-white
+                dark:text-white
+                hover:text-white-800
+                dark:hover:text-white-800
+                focus:outline-none focus:text-white
+                dark:focus:text-white
+              "
+              aria-label="toggle menu"
+            >
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                <path
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div id="mobile-menu" class="items-center hidden lg:flex ease-linear transition-all duration-300">
+          <div class="flex flex-col lg:flex-row lg:mx-6">
+            <a
+              href="#about-us"
+              class="
+                my-3
+                flex
+                items-center
+                text-white
+                dark:text-white
+                hover:text-white
+                dark:hover:text-white
+                lg:mx-4 lg:my-0
+              "
+              >Qui somme nous ?</a
+            >
+            <a
+              id="new-member-btn"
+              class="
+                my-3
+                flex
+                items-center
+                text-white
+                dark:text-white
+                hover:text-white
+                dark:hover:text-white
+                lg:mx-4 lg:my-0
+                cursor-pointer
+              "
+              >Devenir membre</a
+            >
+            <a
+            class="
+              my-3
+              cursor-pointer
+              text-white
+              dark:text-white
+              hover:text-white
+              dark:hover:text-white
+              lg:mx-4 lg:my-0
+              py-4
+              px-8
+              rounded-lg
+              bg-red-600
+              "
+              onclick="toggleModal('make-donation-modal')"
+              >Faire un don</a
+          >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="min-h-screen relative lg:h-screen bg-gray-50">
+      <img src="https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="h-full w-full absolute top-0 left-0 object-cover" />
+      <div class="bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full"></div>
+      <div class="absolute top-0 left-0 text-white grid grid-cols-1 w-4/5 h-full">
+        <div class="flex flex-col items-left  w-full px-4 lg:px-12 justify-center h-full">
+          <h5 class="text-4xl py-6 font-bold  text-yellow-400 lg:py-0">
+            NZILA Leaders
+          </h1>
+          <p class="mt-8">
+              NZILA Leaders est une association de jeunes Leaders rassembles autour des ODD pour une amelioration de la qualité de vie sur terre.
+              Formation, Reflexion et Action
+          </p>
+
+          <a
+            id="nl-tecno-party-btn"
+            class="
+            my-8
+            text-white
+            dark:text-white
+            hover:text-white
+            dark:hover:text-white
+            py-4
+            px-8
+            rounded-lg
+            w-48
+            bg-yellow-600
+            cursor-pointer
+            "
+            >NL Tecno party</a
+        >
+        </div>
+      </div>
+    </header>
+    <div class="relative mt-24 lg:-mt-24" style="z-index: 1;">
+      <div class="grid w-4/5 mx-auto gap-4 grid-cols-12">
+        <div class="col-span-12 mx-auto lg:col-span-4">
+          <div class="shadow-xl flex flex-col items-center justify-between bg-white mx-auto h-56 w-56 rounded-lg">
+            <img class="w-24 mt-8" src="data:image/png;base64,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"/>
+            <p class="w-full text-center pb-4">Formation</p>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-4">
+          <div class="shadow-xl flex flex-col items-center justify-between bg-white mx-auto h-56 w-56 rounded-lg">
+            <img class="w-24 mt-8" src="data:image/png;base64,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"/>
+            <p class="w-full text-center pb-4">Reflexion</p>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-4">
+          <div class="shadow-xl flex flex-col items-center justify-between bg-white mx-auto h-56 w-56 rounded-lg">
+            <img class="w-24 mt-8" src="data:image/png;base64,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"/>
+            <p class="w-full text-center pb-4">Actions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-us" class="w-4/5 mx-auto text-center bg-white rounded-xl">
+      <section class="mt-48 text-left">
+        <h1 class="text-4xl font-bold text-left">Qui sommes nous ?</h1>
+        <p class="text-lg text-left mt-4">
+          <strong>NZILA Leaders</strong> est une association à but non-lucratif régulièrement constituée, soumise au droit gabonais et régie par les dispositions de la loi n°35/62 du 10 décembre 1962 relative aux associations. Elle s’appuie sur les Objectifs de Développement Durable (ODD) pour l’amélioration de la qualité de vie des personnes vulnérables. Elle regorge d’une pluralité de jeunes engagés, venus d’horizons divers et bénéficiant d’expériences variées ; NZILA Leaders compte près de vingt-sept milles (27 000) followers sur les réseaux sociaux.
+        </p>
+
+        <p class="mt-4">
+          A cet effet pour renforcer cette vision, NZILA Leaders a créé une application pour aider les jeunes collégiens et lycéens à s’épanouir avec le corps enseignant et le corps familial. Nous avons constaté que la génération future gabonaise a besoin d’un guide dans la vie familiale, scolaire, sociale et nationale pour s’en sortir demain. 
+        </p>
+
+        <p class="mt-4">Cette application se base sur trois volets, <strong>le guide du bon citoyen, inbox et l’adhésion à l’association.</strong></p>
+      </section>
+    </div>
+
+    <section class="mt-32">
+      <h1 class="text-4xl font-bold text-yellow-400 text-center">Nos Activites</h1>
+      <div class="grid grid-cols-1 mt-8">
+        <div class="w-full overflow-hidden py-16">
+          <div class="circle relative hidden lg:flex">
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+            <div class="circle-illustrations flex w-full w-4/5">
+              <img  class="h-48 w-48 rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <div class="ml-8">
+                <h3 class="text-xl font-bold">Organisation de tournoi sportif</h3>
+                <p class="text-lg text-left w-2/3 mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:hidden w-10/12 mx-auto">
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+            <div class="flex flex-nowrap text-center mt-20 lg:mt-0 flex-col  justify-center">
+              <img  class="h-48 w-48 mx-auto rounded-full" src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <h3 class="text-xl font-bold  mt-8">Organisation de tournoi sportif</h3>
+              <p class="text-lg mt-4">
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-32 w-10/12 mx-auto">
+      <h1 class="text-4xl font-bold text-yellow-400 text-center">Nos Partenaires</h1>
+      <h4 class="text-2xl mt-12 text-center text-gray-500">Ils nous ont permis de réaliser un certain nombre d'activités</h4>
+
+      <div class="grid mt-12 lg:mt-24 grid-cols-1 lg:grid-cols-3">
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl mx-auto">Sobraga</h3>
+          <p>Les Brasseries du Gabon</p>
+        </div>
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl mx-auto">Sobraga</h3>
+          <p>Les Brasseries du Gabond</p>
+        </div>
+        <div class="my-3 mx-auto">
+          <h3 class="text-xl">Sobraga</h3>
+          <p>Les Brasseries du Gabon</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="the-osc" class="mt-32 mb-32 w-10/12 mx-auto">
+      <div class="bg-white">
+        <nav id="home-tab-nav" class="flex flex-col justify-center border-b border-gray sm:flex-row">
+          <button
+            id="home-tab-nav-btn-1"
+            onclick="switchHomeTab(1);"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+              active
+              font-medium
+            "
+          >
+            Tous les membres</button
+          ><button
+            id="home-tab-nav-btn-2"
+            onclick="switchHomeTab(2)"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+            "
+          >
+            Devenir Membre</button
+          ><button
+            id="home-tab-nav-btn-3"
+            onclick="switchHomeTab(3)"
+            class="
+              text-gray-600
+              py-4
+              px-6
+              block
+              hover:text-blue-500
+              focus:outline-none
+            "
+          >
+            NL Tech Party</button>
+        </nav>
+
+        <div id="home-tabs" class="tabs  max-w-7xl mx-auto sm:px-6 lg:px-8 mt-32">
+
+          <div id="home-tab-1">
+            <h1 class="text-2xl text-gray-500">NZILA Compte pres de 1562 membres au Gabon et a l'International</h1>
+            <div class="grid grid-cols-12 gap-4 mt-24">
+              <div class="col-span-12 lg:col-span-4 lg:col-span-3">
+                <img class="h-48 w-48 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              </div>
+              <div class="col-span-12 lg:col-span-8 lg-col-span-9 text-center lg:text-left">
+                <h4 class="text-2xl font-bold">Serge Manani DAOUDA</h4>
+                <p class="text-gray-500">President de l'association depuis 2015</p>
+                <p class="text-lg text-left mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                  Lorem ipsum dolor sit amet, consectetur adiscisiping. Lorem ipsum dolor sit amet, consectetur adiscisiping.
+                </p>
+              </div>
+            </div> <!-- user-card -->
+
+            <div class="grid grid-cols-12 mt-32 gap-8 justify-center items-center">
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img class="h-32 w-32 mx-auto rounded-full object-cover" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <strong class="text-center  w-full block mt-4">Serge MANANI DAOUDA</strong>
+                <p class="text-center text-gray-500 ">Président</p>
+              </div>  
+            </div><!-- users grid col -->
+          </div>
+
+          <div id="home-tab-2" style="display: none">
+            <h1 class="text-2xl mb-24 text-gray-500">Remplissez le formulaire pour adhérer à l'association NZILA Leaders</h1>
+            <form id="new-user-form" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <input
+                  type="text"
+                  placeholder="Nom"
+                  id="lastName"
+                  name="nom"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+                <input
+                  type="text"
+                  placeholder="Prénom"
+                  id="firstName"
+                  name="prenom"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+                <input
+                  placeholder="Adresse Mail"
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+                <input
+                  type="tel"
+                  placeholder="Téléphone"
+                  id="telephone"
+                  name="telephone"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />                  
+                <input
+                  type="text"
+                  placeholder="Adresse"
+                  id="adresse"
+                  name="adresse"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />
+                <input
+                  type="text"
+                  placeholder="Poste"
+                  id="poste"
+                  name="poste"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />           
+                <input
+                  type="text"
+                  placeholder="Ville"
+                  id="ville"
+                  name="ville"
+                  required
+                  class="
+                    px-3
+                    py-4
+                    placeholder-gray-400
+                    text-gray-600
+                    relative
+                    bg-white bg-white
+                    rounded
+                    text-sm
+                    border border-gray-400
+                    outline-none
+                    focus:outline-none focus:ring
+                    w-full
+                  "
+                />            
+              <div class="mt-12 lg:col-span-2">
+                <button
+                  id="register-new-user"
+                  class="
+                    bg-blue-500
+                    text-white
+                    active:bg-yellow-600
+                    font-bold
+                    uppercase
+                    text-base
+                    px-8
+                    md:px-32
+                    py-4
+                    rounded
+                    shadow-md
+                    hover:shadow-lg
+                    outline-none
+                    focus:outline-none
+                    mr-1
+                    mb-1
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                  type="button"
+                >
+                  <i id="register-loading-icon" class="icn">&#9964;</i>Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div id="home-tab-3" style="display: none">
+            <p class="text-2xl text-gray-500">
+              Le projet NL tech party vise à offir la possibilité aux jeunes de s'exprimer librement sans crainte de subir une quelconque discrimination ainsi que de se former en s'amusant aux questions de civisme.
+            </p>
+            <p class="text-2xl mt-8 text-gray-500">
+              D'autre part la plateforme est un outil d'aide aux psychologue des lycées à détecter plus rapidement les élèves ayant des difficultés particulières.
+            </p>
+
+            <div class="grid grid-cols-12 mt-16 gap-4 md:gap-8">
+              <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <img src="assets/img/iPhone_X_NZILA.svg" class="w-full" alt="some image" />
+              </div>
+
+              <div class="col-span-12 md:col-span-8 lg:col-span-9">
+                <h3 class="text-yellow-500 font-bold text-3xl">Bon Citoyen</h3>
+                <p class="mt-4 text-xl">
+                  En respectant les ODD 3 "Bonne santé et bien-être" et ODD 4 "Education de qualité", permet d’inculquer des valeurs républicaines et citoyennes aux générations futures afin de prendre conscience de l’intérêt et la portée de chaque action qu’ils peuvent exercer. L’éducation civique a toujours été au cœur de notre système éducatif et son renforcement est nécessaire pour participer à la construction du citoyen de demain.  Il est proposé sur la forme d’un jeu ludique, portant sur le civisme, la culture générale, pour celui qui aura été un exemple. En réussissant, chaque niveau recevra un pack (un tee-shirt, une casquette, jeux de sociétés ou autres) de l’association à la fin de chaque trimestre.
+                </p>
+                
+                <h3 class="text-yellow-500 font-bold text-3xl mt-8">Inbox</h3>
+                <p class="mt-4 text-xl">
+                  est une boîte aux lettres numérique, qui permet aux jeunes du premier et du second cycle de poser des problématiques auxquelles ils sont confrontées, que ce soit sur le plan scolaire ou familiale, de manière anonyme au corps enseignant, aux assistante sociales ou aux responsables des associations de parents d'élèves. Ils pourront poser des questions liées à la vie scolaire, aux problèmes personnels qui les empêcheraient de se concentrer dans leurs études et mieux encore, de signaler des cas d'agression, de harcèlement et autres de la même catégorie. Ce serait un moyen de rétablir la confiance entre les élèves et  le cors enseignant. 
+                </p>
+
+                <h3 class="text-yellow-500 font-bold text-3xl mt-8">Backoffice</h3>
+                <p class="mt-4 text-xl">
+                  <strong>L’adhésion à l’association NZILA Leaders</strong> est un volet qui permettra à toutes personnes d'adhérer à l'association, ce qui lui donnera droit automatiquement à un numéro , dès lors qu'il aura payer les frais d'adhésion.                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24 bg-black">
+      <div class="w-10/12 mx-auto sm:px-6 lg:px-12 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12">
+          <div>
+            <h3 class="text-4xl text-white">Suivez nous sur nos reseaux</h3>
+            <img src="assets/facebook_dark.svg" class="h-16 w-16 mt-4">
+          </div>
+          <div>
+            <p class="text-lg text-left text-white mt-4">
+              <strong>NZILA Leaders</strong> est une association à but non-lucratif régulièrement constituée, soumise au droit gabonais et régie par les dispositions de la loi n°35/62 du 10 décembre 1962 relative aux associations. Elle s’appuie sur les Objectifs de Développement Durable (ODD) pour l’amélioration de la qualité de vie des personnes vulnérables. Elle regorge d’une pluralité de jeunes engagés, venus d’horizons divers et bénéficiant d’expériences variées ; NZILA Leaders compte près de vingt-sept milles (27 000) followers sur les réseaux sociaux.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap justify-center mt-24">
+          <a
+            class="
+              my-1
+              text-white
+              dark:text-white
+              hover:text-blue-500
+              dark:hover:text-blue-500
+              underline
+              text-xl
+              mx-4
+              font-thin
+            "
+            href="assets/docs/politique_confidentialite.pdf"
+            >Politique de confidentialité</a
+          >
+          <a
+            class="
+            my-1
+            mx-4
+            text-white
+            dark:text-white
+            hover:text-blue-500
+            dark:hover:text-blue-500
+            underline
+            text-xl
+            font-thin
+            "
+            href="assets/docs/CGU_NZILAME.pdf"
+            >Condition d'utilisation</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+
+      Make Modals
+
+     -->
+<!-- Modal -->
+<div
+class="
+  hidden
+  overflow-x-hidden overflow-y-hidden
+  fixed
+  inset-0
+  z-50
+  outline-none
+  focus:outline-none
+  justify-center
+  items-center
+"
+id="make-donation-modal"
+>
+<div class="relative w-auto my-6  mx-auto max-w-sm">
+  <!--content-->
+  <div
+    class="
+      border-0
+      rounded-lg
+      shadow-lg
+      relative
+      flex flex-col
+      w-full
+      bg-white
+      outline-none
+      focus:outline-none
+      
+    "
+  >
+    <!--header-->
+    <div
+      class="
+        flex
+        items-start
+        justify-between
+        p-5
+        border-b border-solid border-gray-200
+        rounded-t
+      "
+    >
+      <h3 class="text-3xl font-semibold">Faire un Don</h3>
+      <button
+        class="
+          p-1
+          ml-auto
+          bg-transparent
+          border-0
+          text-gray-300
+          float-right
+          text-3xl
+          leading-none
+          font-semibold
+          outline-none
+          focus:outline-none
+        "
+        onclick="toggleModal('make-donation-modal')"
+      >
+        <span
+          class="
+            bg-transparent
+            h-6
+            w-6
+            text-2xl
+            block
+            outline-none
+            focus:outline-none
+          "
+        >
+          <i class="fas fa-times">x</i>
+        </span>
+      </button>
+    </div>
+    <!--body-->
+    <div class="relative p-6 flex-auto">
+      <form id="make-donation-form">
+        <h6 class="text-xl mb-4">Le Donnateur</h6>
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <input
+            type="text"
+            placeholder="Nom"
+            id="donator-lastName"
+            name="nom"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />                  
+          <input
+            type="text"
+            placeholder="Prénom"
+            id="donator-firstName"
+            name="prenom"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+          <input
+            type="tel"
+            placeholder="Téléphone"
+            id="donator-telephone"
+            name="telephone"
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+        </div>
+        <h6 class="text-xl mb-4 mt-5">Informations du paiement</h6>
+        <div class="grid grid-cols-1 mt-4 gap-4">
+          <input
+            type="tel"
+            placeholder="Tel Airtel Money"
+            id="telephone-airtel-money"
+            name="telephone-airtel-money"
+            required
+            class="
+              px-3
+              py-4
+              placeholder-gray-400
+              text-gray-600
+              relative
+              bg-white bg-white
+              rounded
+              text-sm
+              border border-gray-400
+              outline-none
+              focus:outline-none focus:ring
+              w-full
+            "
+          />
+          <textarea
+            id="description-paiement"
+            name="description-paiement"
+            class="form-textarea border px-3 py-4 border-gray-400 outline-none focus:outline-none focus:ring text-sm rounded mt-1 block w-full"
+            rows="3"
+            placeholder="Compte Airtel Money (Propriétaire)"
+          ></textarea>
+        </div>
+      </form>
+    </div>
+    <div
+      class="
+        flex
+        items-center
+        justify-end
+        p-6
+        border-t border-solid border-gray-200
+        rounded-b
+      "
+    >
+      <button
+        class="
+          text-yellow-500
+          background-transparent
+          font-bold
+          uppercase
+          px-6
+          py-2
+          text-sm
+          outline-none
+          focus:outline-none
+          mr-1
+          mb-1
+          ease-linear
+          transition-all
+          duration-150
+        "
+        type="button"
+        onclick="toggleModal('make-donation-modal')"
+      >
+        Annuler
+      </button>
+      <button
+        class="
+          bg-yellow-500
+          text-white
+          active:bg-yellow-600
+          font-bold
+          uppercase
+          text-xs
+          px-4
+          py-2
+          rounded
+          shadow
+          hover:shadow-md
+          outline-none
+          focus:outline-none
+          mr-1
+          mb-1
+          ease-linear
+          transition-all
+          duration-150
+        "
+        type="button"
+        onclick="makeDonation();"
+      >
+        <i id="donation-loading-icon" class="icn">&#9964;</i>Valider
+      </button>
+    </div>
+  </div>
+    <!--footer-->
+    
+  </div>
+</div>
+</div>
+<div
+class="hidden opacity-25 fixed inset-0 z-40 bg-black"
+id="make-donation-modal-backdrop"
+></div>
+  </body>
+</html>
